@@ -1,0 +1,49 @@
+! name: Robert — Art History + Primary Sources (Strict)
+! description: Only shows results that match the boosts below (default discard).
+! public: false
+! author: Robert Grantham
+! avatar: #0B1F3A
+! license: CC0-1.0
+
+! ------------------------------------------------------------
+! STRICT MODE:
+! $discard with no pattern = “default action is discard”
+! Anything not explicitly matched below won’t appear.
+! ------------------------------------------------------------
+$discard
+
+! Optional broad allowances (can be noisy; delete if you want pure curation)
+|https://*.gov/$boost=2
+|https://*.edu/$boost=1
+
+! --- Primary sources & archives
+$boost=4,site=loc.gov
+$boost=4,site=archives.gov
+$boost=3,site=govinfo.gov
+$boost=3,site=congress.gov
+$boost=3,site=federalregister.gov
+$boost=3,site=nationalarchives.gov.uk
+$boost=3,site=europeana.eu
+$boost=3,site=gallica.bnf.fr
+$boost=3,site=dp.la
+$boost=2,site=hathitrust.org
+$boost=2,site=archive.org
+$boost=2,site=gutenberg.org
+$boost=2,site=jstor.org
+$boost=2,site=muse.jhu.edu
+
+! --- Museums & art institutions
+$boost=4,site=metmuseum.org
+$boost=3,site=getty.edu
+$boost=3,site=nga.gov
+$boost=3,site=vam.ac.uk
+$boost=3,site=tate.org.uk
+$boost=3,site=rijksmuseum.nl
+$boost=3,site=louvre.fr
+$boost=3,site=museodelprado.es
+$boost=3,site=lacma.org
+$boost=3,site=moma.org
+
+! --- Art history / education
+$boost=3,site=smarthistory.org
+$boost=2,site=khanacademy.org
