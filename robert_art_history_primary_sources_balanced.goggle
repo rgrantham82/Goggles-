@@ -20,7 +20,7 @@ $discard,site=pin.it
 $discard,site=quora.com
 $discard,site=fandom.com
 
-! Optional: keep Medium, but many folks prefer it gone:
+! Optional: keep Medium, but many folks prefer it quiet
 $downrank=2,site=medium.com
 
 ! =========================
@@ -32,7 +32,7 @@ $downrank=2,site=answers.com
 $downrank=2,site=slideshare.net
 $downrank=2,site=scrbd.com
 
-! Forums can be helpful but noisy; downrank rather than delete:
+! Forums can be helpful but noisy
 $downrank=1,site=reddit.com
 
 ! =========================
@@ -54,7 +54,7 @@ $boost=2,site=hathitrust.org
 $boost=2,site=archive.org
 $boost=2,site=gutenberg.org
 
-! Scholarly aggregators (often paywalled, but legit):
+! Scholarly aggregators (often paywalled, but legit)
 $boost=2,site=jstor.org
 $boost=2,site=muse.jhu.edu
 
@@ -72,7 +72,7 @@ $boost=3,site=museodelprado.es
 $boost=3,site=lacma.org
 $boost=3,site=moma.org
 
-! Art history / education:
+! Art history / education
 $boost=3,site=smarthistory.org
 $boost=2,site=khanacademy.org
 
@@ -82,6 +82,3 @@ $boost=2,site=khanacademy.org
 /printable/$downrank=2
 /worksheet/$downrank=2
 /free-template/$downrank=2
-
-! Example of targeted cleanup: Pinterest spam inside other sites (optional)
-/pinterest/$discard,site=instagram.com
