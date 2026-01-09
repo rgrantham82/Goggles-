@@ -10,6 +10,7 @@
 ! $discard with no pattern = “default action is discard”
 ! Anything not explicitly matched below won’t appear.
 ! ------------------------------------------------------------
+
 $discard
 
 ! Optional broad allowances (can be noisy; delete if you want pure curation)
