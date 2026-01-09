@@ -1,0 +1,87 @@
+! name: Robert — Art History + Primary Sources (Balanced)
+! description: Boosts museums/archives/primary sources; discards common junk (Pinterest/Quora); downranks content-farms.
+! public: false
+! author: Robert Grantham
+! avatar: #BF5700
+! license: CC0-1.0
+
+! ------------------------------------------------------------
+! QUICK NOTES
+! - $boost is the default action if you omit an action.
+! - Strength is 1–10. I’m using 2–4 for “meaningful but not tyrannical.”
+! - Keep adding sites you trust; delete rules you don’t like.
+! ------------------------------------------------------------
+
+! =========================
+! HARD REMOVALS (discard)
+! =========================
+$discard,site=pinterest.com
+$discard,site=pin.it
+$discard,site=quora.com
+$discard,site=fandom.com
+
+! Optional: keep Medium, but many folks prefer it gone:
+$downrank=2,site=medium.com
+
+! =========================
+! DOWNRANK COMMON “SEARCH POLLUTION”
+! =========================
+$downrank=3,site=wikihow.com
+$downrank=3,site=ehow.com
+$downrank=2,site=answers.com
+$downrank=2,site=slideshare.net
+$downrank=2,site=scrbd.com
+
+! Forums can be helpful but noisy; downrank rather than delete:
+$downrank=1,site=reddit.com
+
+! =========================
+! PRIMARY SOURCES & ARCHIVES (boost)
+! =========================
+$boost=4,site=loc.gov
+$boost=4,site=archives.gov
+$boost=3,site=govinfo.gov
+$boost=3,site=congress.gov
+$boost=3,site=federalregister.gov
+$boost=3,site=census.gov
+
+$boost=3,site=nationalarchives.gov.uk
+$boost=3,site=europa.eu
+$boost=3,site=europeana.eu
+$boost=3,site=gallica.bnf.fr
+$boost=3,site=dp.la
+$boost=2,site=hathitrust.org
+$boost=2,site=archive.org
+$boost=2,site=gutenberg.org
+
+! Scholarly aggregators (often paywalled, but legit):
+$boost=2,site=jstor.org
+$boost=2,site=muse.jhu.edu
+
+! =========================
+! MUSEUMS & ART INSTITUTIONS (boost)
+! =========================
+$boost=4,site=metmuseum.org
+$boost=3,site=getty.edu
+$boost=3,site=nga.gov
+$boost=3,site=vam.ac.uk
+$boost=3,site=tate.org.uk
+$boost=3,site=rijksmuseum.nl
+$boost=3,site=louvre.fr
+$boost=3,site=museodelprado.es
+$boost=3,site=lacma.org
+$boost=3,site=moma.org
+
+! Art history / education:
+$boost=3,site=smarthistory.org
+$boost=2,site=khanacademy.org
+
+! =========================
+! “LESS PRINTABLE BAIT” (pattern-based downranks)
+! =========================
+/printable/$downrank=2
+/worksheet/$downrank=2
+/free-template/$downrank=2
+
+! Example of targeted cleanup: Pinterest spam inside other sites (optional)
+/pinterest/$discard,site=instagram.com
